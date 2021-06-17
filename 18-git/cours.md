@@ -80,6 +80,9 @@ Ligne de commande a ouvrir dans le bon dossier.
 # Comment push sur un autre repository
 
     -> Pour ça, il faut que le propriétaire du repository vous ai ajouté en colloborateur dans la section "settings" -> "manage-access"
+
+
+    
     
     
 
