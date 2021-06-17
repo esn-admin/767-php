@@ -26,4 +26,7 @@ role - int(1) - defaut 0
     -> Un dossier images qui contient toutes nos images
 
 
-Exercice -> Dans header.inc.php, importer la navigation de bootstrap
+Exercice -> 
+    1_Dans header.inc.php, importer la navigation de bootstrap
+    2_Creez les pages inscription.php, connexion.php, profil.php,produit.php, en plaçant dans chacune d'elle les includes
+    3- Dans votre navigation bootsrap, placer dans le menu les nouvelles pages crées
