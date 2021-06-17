@@ -72,6 +72,8 @@
     
         function addition($entierA, $entierB, $entierC){
             $resultat = $entierA + $entierB + $entierC;
+
+            return $resultat;
         }
     
         $resultatDeMonAddition = addition(2,3,4);

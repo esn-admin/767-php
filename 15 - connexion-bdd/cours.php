@@ -61,13 +61,13 @@
             // Faire une requete avec PREPARE (pour quand les infos viennent de l'exterieur)
 
             $enregistrement = $pdo->prepare("UPDATE abonne SET prenom=? WHERE id_abonne = ?");
-            $enregistrement->execute(
+            $resultat = $enregistrement->execute(
                 ["Rafiki", 3]
             );
 
             // Dans un premier temps on prépare la requete en metant un point d'interrogation la ou on pense inserer une variable.
 
-
+            // Dans $résultat, on recupere true si tout s'est bien passé, false sinon
             // Exercice : Creez une page pour ajouter des nouveaux livres
 
             
