@@ -1,0 +1,2 @@
+# Dans le fichier .gitignore, vous placer sur chaque ligne le chemin du fichier ou dossier que vous ne vouslez PAS envoyé sur le repository
+.git
