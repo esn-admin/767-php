@@ -12,6 +12,19 @@ function debug(array $listeADebugger){
 }
 
 
+/**
+ * La fonction verif pseudo sert a verifier si le pseudo remplis certains critère.
+ * Les criteres sont :
+ *  Pseudo dois être compris entre 4 et 20 caracteres
+ * @param string $pseudo
+ * @return bool True si la verif nous convient, false sinon
+ */
+
+function verifPseudo(){
+    
+}
+
+
 
 
 

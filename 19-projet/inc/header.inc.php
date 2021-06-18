@@ -25,5 +25,8 @@
         </div>
     </nav>
 </header>
+<div class="conteneurMsg">
+    <?= $msg ?>
+</div>
 
 
