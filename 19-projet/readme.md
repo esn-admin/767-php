@@ -30,3 +30,9 @@ Exercice ->
     1_Dans header.inc.php, importer la navigation de bootstrap
     2_Creez les pages inscription.php, connexion.php, profil.php,produit.php, en plaçant dans chacune d'elle les includes
     3- Dans votre navigation bootsrap, placer dans le menu les nouvelles pages crées
+
+
+# Creation d'un nouveau membre 
+
+- Creez le formulaire dans inscription.php
+- Creez une page traitement-inscription.php
