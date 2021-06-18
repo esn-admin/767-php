@@ -36,3 +36,5 @@ Exercice ->
 
 - Creez le formulaire dans inscription.php
 - Creez une page traitement-inscription.php
+
+$nbLigne = $enregistrement->rowcount()
