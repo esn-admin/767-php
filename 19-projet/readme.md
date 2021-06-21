@@ -38,3 +38,12 @@ Exercice ->
 - Creez une page traitement-inscription.php
 
 $nbLigne = $enregistrement->rowcount()
+
+
+# Objectif page de connexion
+
+- Creation du formulaire (pseudo et mdp)
+- Page traitement-connexion.php
+- Verifie si le user et le mdp sont bon
+- Si ils ne sont pas bon, on renvoie vers connexion avec un message d'erreur
+- Si ils sont bon, on stock dans Session l'information que la personne est connectée, puis on redirige vers profil.php
