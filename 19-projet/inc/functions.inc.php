@@ -24,6 +24,13 @@ function verifPseudo(){
     
 }
 
+/**
+ * Verifie dans la base de donnée si le pseudo est deja existant dans la base de donnée
+ * @param string $pseudo 
+ * @return bool true si le pseudo existe, false sinon
+ */
+function checkPseudo(){}
+
 
 
 
