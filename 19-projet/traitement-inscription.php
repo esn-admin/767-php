@@ -25,7 +25,7 @@
         // Enregistrer les donnees dans des variables ($prenom, $nom,...)
 
         $pseudo = $_POST["pseudo"];
-        $mdp = $_POST["mdp"];
+        $mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
         $nom = $_POST["nom"];
         $prenom = $_POST["prenom"];
         $email = $_POST["email"];
