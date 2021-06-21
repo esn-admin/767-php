@@ -6,6 +6,9 @@
     include("inc/head.inc.php");
     include("inc/header.inc.php");
 
+
+    
+       
     ?>
     
     <main>Je suis la page d'accueil</main>

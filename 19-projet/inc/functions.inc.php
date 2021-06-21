@@ -20,8 +20,12 @@ function debug(array $listeADebugger){
  * @return bool True si la verif nous convient, false sinon
  */
 
-function verifPseudo(){
-    
+function verifPseudo(string $pseudo){
+    if (strlen($pseudo) < 4 OR strlen($pseudo) > 20){
+        return false;
+    }
+    return true;
+
 }
 
 /**
@@ -29,7 +33,35 @@ function verifPseudo(){
  * @param string $pseudo 
  * @return bool true si le pseudo existe, false sinon
  */
-function checkPseudo(){}
+
+
+function checkPseudo($pseudo){
+    // Requete dans la base de donnée avec le pseudo
+    global $pdo; // Va dans l'espace global, et ramène la variable $pdo
+
+    $enregistrement = $pdo->prepare("SELECT * FROM membre WHERE pseudo = ?");
+
+    $resultat = $enregistrement->execute(
+        [$pseudo]
+    );
+    // Si la requete a bien fonctionnée
+    if ($resultat){
+        $nbLigneDansRequete = $enregistrement->rowCount();
+        // Je regarde le nombre de ligne dans l'enregistrement
+        if ($nbLigneDansRequete){
+            // Si il y a une ligne ou pluss, on retourne true
+            return true;
+        }else{
+            // s'il n'y a pas de ligne, on retourne false
+            return false;
+        }
+    }
+
+    
+
+   
+
+}
 
 
 

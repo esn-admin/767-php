@@ -8,11 +8,19 @@
 
         // Verification des champs
 
-        if (isset($_POST["pseudo"]) AND verifPseudo($_POST["pseudo"]){
+        
 
+        if (!isset($_POST["pseudo"]) OR !verifPseudo($_POST["pseudo"])){
+            header("location: " . URL . "inscription.php?message=errorPseudo");
+            exit();
         }
 
-        // Verification de la presence du pseudo dans la bdd 
+        // // Verification de la presence du pseudo dans la bdd 
+
+        if (checkPseudo($_POST["pseudo"])){
+            header("location: " . URL . "inscription.php?message=pseudoExist");
+            exit();
+        }
 
         // Enregistrer les donnees dans des variables ($prenom, $nom,...)
 

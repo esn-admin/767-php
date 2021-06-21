@@ -9,6 +9,18 @@
       </div>";
     }
 
+    if (isset($_GET["message"]) AND $_GET["message"] == "errorPseudo"){
+        $msg = "<div class=\"alert alert-danger w-50 mx-auto m-5 \" role=\"alert\">
+        Votre pseudo dois être compris entre 4 et 20 caracteres.
+      </div>";
+    }
+
+    if (isset($_GET["message"]) AND $_GET["message"] == "pseudoExist"){
+        $msg = "<div class=\"alert alert-danger w-50 mx-auto m-5 \" role=\"alert\">
+        Ce pseudo est déja utilisé !
+      </div>";
+    }
+
     include("inc/head.inc.php");
     include("inc/header.inc.php");
 
