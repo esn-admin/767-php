@@ -81,19 +81,31 @@ function checkPseudo($pseudo){
       global $pdo;
 
       // deja, si l'utilisateur n'est pas connecté, on renvoie false directe
-      if (!userIsConnect()){
-          return false;
-      }
+        if (!userIsConnect()){
+            return false;
+        }
 
-      // Faire une requete dans la base de donnée pour recuperer le role
+        // Faire une requete dans la base de donnée pour recuperer le role
 
-      
+        $pseudoPersonneConnecte = $_SESSION["pseudo"];
 
         $enregistrement = $pdo->prepare("SELECT * FROM membre WHERE pseudo = ?");
 
+        $resultat = $enregistrement->execute(
+            [$pseudoPersonneConnecte]
+        );
 
+        if ($resultat){
+            $maLigne = $enregistrement->fetch(PDO::FETCH_ASSOC);
 
+            $rolePersonneConnecte = $maLigne["role"];
 
+            if ($rolePersonneConnecte == 1){
+                return true;
+            }else{
+                return false;
+            }
+        }
   }
 
 

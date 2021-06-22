@@ -41,6 +41,14 @@
                         </li>
                         <?php
                     }
+                    if (adminIsConnect()){
+                        // Administration n'apparait que si l'utilisateur est connecté
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL; ?>admin">Administration</a>
+                        </li>
+                        <?php
+                    }
                     ?>
                 </ul>
             </div>
