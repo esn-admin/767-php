@@ -47,6 +47,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?= URL; ?>admin">Administration</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL; ?>admin/membres.php">Membres</a>
+                        </li>
                         <?php
                     }
                     ?>

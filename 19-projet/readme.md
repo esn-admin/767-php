@@ -47,3 +47,10 @@ $nbLigne = $enregistrement->rowcount()
 - Verifie si le user et le mdp sont bon
 - Si ils ne sont pas bon, on renvoie vers connexion avec un message d'erreur
 - Si ils sont bon, on stock dans Session l'information que la personne est connectée, puis on redirige vers profil.php
+
+# Page membre.php
+
+- Creer membre.php (sois dans l'admin si possible, soit comme toutes les autres pages)
+- Afficher un tableau html avec tout les membres
+
+
