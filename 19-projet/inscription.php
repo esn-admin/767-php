@@ -3,6 +3,13 @@
     include("inc/init.inc.php");
     include("inc/functions.inc.php");
 
+    // Page accessible uniquement aux utilisateurs non connectés
+
+    if (userIsConnect()){
+        header("location:" . URL . "profil.php");
+        exit();
+    }
+
     if (isset($_GET["message"]) AND $_GET["message"] == "req-fail"){
         $msg = "<div class=\"alert alert-danger w-50 mx-auto m-5 \" role=\"alert\">
         La requete a échoué, vous n'avez pas été ajouté à la base de donnée.

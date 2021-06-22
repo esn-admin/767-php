@@ -3,13 +3,35 @@
     include("inc/init.inc.php");
     include("inc/functions.inc.php");
 
-    
+    // Page accessible uniquement aux utilisateurs non connectés
+
+    if (userIsConnect()){
+        header("location:" . URL . "profil.php");
+        exit();
+    }
 
     if (isset($_GET["message"]) AND $_GET["message"] == "inscr-success"){
         $msg = "<div class=\"alert alert-success w-50 mx-auto m-5 \" role=\"alert\">
         Vous avez bien été ajouté à la liste des utilisateurs !
       </div>";
     }
+
+    if (isset($_GET["message"]) AND $_GET["message"] == "pseudo-inexistant"){
+        $msg = "<div class=\"alert alert-danger w-50 mx-auto m-5 \" role=\"alert\">
+        Ce pseudo est inexistant
+      </div>";
+    }
+
+    if (isset($_GET["message"]) AND $_GET["message"] == "faux-mdp"){
+        $msg = "<div class=\"alert alert-danger w-50 mx-auto m-5 \" role=\"alert\">
+        Le mot de passe ne correspond pas !
+      </div>";
+    }
+
+    
+
+
+
     include("inc/head.inc.php");
     include("inc/header.inc.php");
 

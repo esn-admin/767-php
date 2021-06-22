@@ -56,12 +56,22 @@ function checkPseudo($pseudo){
             return false;
         }
     }
-
-    
-
-   
-
 }
+
+/**
+ * Function qui renvoie true si l'utilisateur est connecté, qui renvoie false sinon
+ * @param null
+ * @return bool 
+ */
+ function userIsConnect(){
+     if (isset($_SESSION["pseudo"])){
+         return true;
+     }else{
+         return false;
+     }
+ }
+
+
 
 
 
