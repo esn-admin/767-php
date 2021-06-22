@@ -82,6 +82,13 @@ Ligne de commande a ouvrir dans le bon dossier.
     -> Pour ça, il faut que le propriétaire du repository vous ai ajouté en colloborateur dans la section "settings" -> "manage-access"
 
 
+
+# Recuperer un repository distant
+
+    -> git init
+    -> git clone *lien_du_repository*
+    -> git fetch (pour mettre a jour tout le repository, branch incluse)
+
     
     
     

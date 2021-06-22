@@ -4,6 +4,7 @@
     include("inc/functions.inc.php");
 
     // Page accessible uniquement aux utilisateurs non connectés
+
     if (userIsConnect()){
         header("location:" . URL . "profil.php");
         exit();
