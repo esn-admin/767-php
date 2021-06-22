@@ -56,12 +56,46 @@ function checkPseudo($pseudo){
             return false;
         }
     }
-
-    
-
-   
-
 }
+
+/**
+ * Function qui renvoie true si l'utilisateur est connecté, qui renvoie false sinon
+ * @param null
+ * @return bool 
+ */
+ function userIsConnect(){
+     if (isset($_SESSION["pseudo"])){
+         return true;
+     }else{
+         return false;
+     }
+ }
+
+ /**
+  * Function qui renvoie true si l'utilisateur est connecté ET qu'il est administeur
+  * @param null
+  * @return bool
+  */
+
+  function adminIsConnect(){
+      global $pdo;
+
+      // deja, si l'utilisateur n'est pas connecté, on renvoie false directe
+      if (!userIsConnect()){
+          return false;
+      }
+
+      // Faire une requete dans la base de donnée pour recuperer le role
+
+      
+
+        $enregistrement = $pdo->prepare("SELECT * FROM membre WHERE pseudo = ?");
+
+
+
+
+  }
+
 
 
 

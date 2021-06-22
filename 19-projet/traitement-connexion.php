@@ -41,6 +41,7 @@
                 // Si la verification renvoie true, on stock le pseudo dans session puis on redirige vers le profil
                 if ($resultatVerificationMdp){
                     $_SESSION["pseudo"] = $maLigne["pseudo"];
+                    
                     header("location:" . URL . "profil.php?message=succes-connexion");
                     exit();
 
